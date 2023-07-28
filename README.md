@@ -34,7 +34,7 @@ This repository provides a new type of tuning method, termed as regularized mask
 > Zheng, Kecheng and Wu, Wei and Feng$, Ruili and Zhu Kai and Liu, Jiawei and Zhao, Deli and Zha Zheng-Jun and Chen Wei and Shen, Yujun <br>
 > ** <br>
 
-[[Paper](https://arxiv.org/abs/2306.12423)]
+[[Paper](https://arxiv.org/abs/2307.15049)]
 
 ## Code Coming Soon
 
