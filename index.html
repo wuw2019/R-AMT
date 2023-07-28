@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regularized Mask Tuning: Uncovering Hidden Knowledge in Pre-trained Vision-Language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Regularized Mask Tuning: Uncovering Hidden Knowledge in Pre-trained Vision-Language Models</h1>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=hMDQifQAAAAJ&hl=zh-CN/">Kecheng Zheng</a><sup>1,</sup><sup>2,</sup><sup>†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=-Nv9XWAAAAAJ&hl=zh-CN&oi=sra/">Wei Wu</a><sup>4,</sup><sup>†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dblp.uni-trier.de/pid/20/9594.html">Ruili Feng</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Mo_2YsgAAAAJ&hl=zh-CN&oi=ao">Kai Zhu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dblp.uni-trier.de/pid/12/8228-1.html">Jiawei Liu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=7LhjCn0AAAAJ&hl=zh-CN&oi=sra">Deli Zhao</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.captain-whu.com/xia_En.html">Zheng-Jun Zha</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.cad.zju.edu.cn/home/chenwei/">Wei Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://shenyujun.github.io/">Yujun Shen</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Ant Group,</span>
+            <span class="author-block"><sup>3</sup>Alibaba Group,</span>
+            <span class="author-block"><sup>4</sup>USTC</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2307.15049"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2307.15049"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wuw2019/RMT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="subtitle has-text-centered">
+    <div class="hero-body">
+      <img src='static/images/teaser1-1.jpg' width="1280" height="880",id="teaser-1">
+      <h2 class="subtitle has-text-centered">
+        <p>
+          Concept diagrams of (a) prompt tuning, (b) adapter tuning, and (c) our mask tuning.
+        </p>
+        The R-AMT significantly boosts their performance without introducing additional inference time.
+        <p>
+
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Prompt tuning and adapter tuning have shown great potential in transferring pre-trained vision-language models (VLMs) to various downstream tasks.
+            In this work, we design a new type of tuning method, termed as regularized mask tuning, which masks the network parameters through a learnable selection.
+            Inspired by neural pathways, we argue that the knowledge required by a downstream task already exists in the pre-trained weights but just gets concealed in the upstream pre-training stage.
+            To bring the useful knowledge back into light, we first identify a set of parameters that are important to a given downstream task, then attach a binary mask to each parameter,
+            and finally optimize these masks on the downstream data with the parameters frozen.
+            When updating the mask, we introduce a novel gradient dropout strategy to regularize the parameter selection, in order to prevent the model from forgetting old knowledge and overfitting the downstream data.
+            Experimental results on 11 datasets demonstrate the consistent superiority of our method over previous alternatives.
+            It is noteworthy that we manage to deliver 18.73% performance improvement compared to the zero-shot CLIP via masking an average of only 2.56% parameters.
+            Furthermore, our method is synergistic with most existing parameter-efficient tuning methods and can boost the performance on top of them.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <!-- Paper Pipeline. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Pipeline</h2>
+      <div class="publication-video">
+        <img src="static/images/Pipeline.jpg"
+        width="720" height="680",id="pipeline">
+      </div>
+    </div>
+  </div>
+
+<section class="experiment">
+  <!-- Experiment. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Experiment</h2>
+      <div class="publication-video">
+        <img src="static/images/exp.png"
+        width="720" height="1880",id="pipeline">
+      </div>
+    </div>
+  </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{RMT2023,
+        title   = {Regularized Mask Tuning: Uncovering Hidden Knowledge in Pre-trained Vision-Language Models},
+        author  = {Zheng, Kecheng and Wu, Wei and Feng$, Ruili and Zhu Kai and Liu, Jiawei and Zhao, Deli and Zha Zheng-Jun and Chen Wei and Shen, Yujun},
+        booktitle = {ICCV},
+        year    = {2023}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was modified from the <a
+            href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. Appreaciate for sharing this perfect template!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
