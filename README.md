@@ -35,7 +35,7 @@ This repository provides a new type of tuning method, termed as regularized mask
 
 ## Code Coming Soon
 
-- [x] Release training code ([Link](https://github.com/wuw2019/R-AMT/tree/main/code)).
+- [x] Release [training code](https://github.com/wuw2019/R-AMT/tree/main/code).
 - [ ] Release pretrained models.
 
 
